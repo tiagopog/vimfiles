@@ -19,8 +19,10 @@ My ~/.vim directory. It has been customized in order to provide a great experien
 Note: for OS X users in order to take full advantage of the plugins and configs set at the vimrc file, I recommend to use [MacVim](https://code.google.com/p/macvim/).
 
 
-1\. Clone the repo: git clone https://github.com/tiagopog/vimfiles.git ~/.vim
+1\. Clone the repo:
 
-2\. Grab the plugin submodules: cd ~/.vim && git submodule init && git submodule update
+```$ git clone https://github.com/tiagopog/vimfiles.git ~/.vim```
 
-3\. Make sure Vim finds the vimrc file by either symlinking it: ln -s ~/.vim/vimrc ~/.vimrc (or by sourcing it from your own ~/.vimrc: source ~/.vim/vimrc)
+2\. Make sure Vim finds the vimrc file by either symlinking it:
+
+```$ ln -s ~/.vim/vimrc ~/.vimrc```
