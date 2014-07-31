@@ -23,6 +23,6 @@ Note: for OS X users in order to take full advantage of the plugins and configs 
 
 ```$ git clone https://github.com/tiagopog/vimfiles.git ~/.vim```
 
-2\. Make sure Vim finds the vimrc file by either symlinking it:
+2\. Make sure Vim finds the vimrc file by symlinking it:
 
 ```$ ln -s ~/.vim/vimrc ~/.vimrc```
