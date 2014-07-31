@@ -1,0 +1,36 @@
+[submodule "bundle/endwise"]
+  path = bundle/endwise
+  url = https://github.com/tpope/vim-endwise.git
+[submodule "bundle/surround"]
+  path = bundle/surround
+  url = https://github.com/tpope/vim-surround.git
+[submodule "bundle/rails"]
+  path = bundle/rails
+  url = https:submodule//github.com/tpope/vim-rails.git
+[submodule "submodulebundle/nerdtree"]
+  path = bundle/nerdtree
+  url = https://github.com/scrooloose/nerdtree.git
+[submodule "bundle/nerdcommenter"]
+  path = bundle/nerdcommenter
+  url = https://github.com/scrooloose/nerdcommenter.git
+[submoduleubmodule "bundle/syntastic"]
+  path = bundle/syntastic
+  url = https://github.com/scrooloose/syntastic.git
+[submoduleodule "bundle/vim-ruby"]
+  path = bundle/vim-ruby
+  url = https://github.submodulecom/vim-ruby/vim-ruby.git
+[submodule "bundle/gundo"]
+  pathh = bundle/gundo
+  url = https://github.com/sjl/gundo.vim.git
+[submodule "bundle/command-t"]
+  pathath = bundle/command-t
+  url = https://github.com/wincent/Command-T.git
+    [submodule "bundle/fugitive"]
+  path = bundle/fugitive
+  url = https://github.com/tpope/vim-fugitive.git
+[submodule "bundleundle/ack"]
+  path = bundle/ack
+  url = https://github.com/mileszs/ack.vim-gitm.git
+[submodule "bundle/vim-coffee-script"]
+  path = bundle/vim-coffee-script
+  url = https://github.com/kchmck/vim-coffee-script.git-runtimet
