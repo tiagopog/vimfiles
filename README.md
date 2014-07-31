@@ -12,7 +12,7 @@ My ~/.vim directory. It has been customized in order to provide a great experien
 
 # Screenshot
 
-![Vim screenshot](http://pasteboard.co/1VeSTDAt.png)
+![Vim screenshot](https://s3-us-west-2.amazonaws.com/mess-organizer/vim.png)
 
 # Installation
 
