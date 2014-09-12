@@ -17,7 +17,7 @@ My ~/.vim directory. It has been customized in order to provide a great experien
 
 
 
-1\. Clone the repo:
+1\. Clone this repo:
 
 ```
 $ cd  ~/
