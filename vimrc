@@ -37,6 +37,10 @@ set incsearch " search as you type
 set gdefault  " global matching is default
 set smartcase " use smartcase, when search query starts with Uppercase, turn off case insensitive search
 
+" NERDTree
+let g:nerdtree_tabs_open_on_console_startup=1
+let g:nerdtree_tabs_smart_startup_focus=1
+
 " indentation
 set autoindent
 set smartindent
@@ -165,8 +169,8 @@ nnoremap <leader>a :Ag
 " tabs - moving around, (CTRL+t to new tab)
 map <C-t> :tabnew<CR>
 map <C-M-n> :tabedit %<CR>
-map <C-l> :tabnext<cr>
-map <C-h> :tabprevious<cr>
+" map <C-l> :tabnext<cr>
+" map <C-h> :tabprevious<cr>
 
 if has("gui_macvim")
   " Press Ctrl-Tab to switch between open tabs (like browser tabs) to
