@@ -27,6 +27,9 @@ set clipboard+=unnamed,unnamedplus,autoselect " share clipboard
 set ttyfast " I  got a fast terminal!
 set ttimeoutlen=50  " make Esc work faster
 set lazyredraw " get faster, redraw only when it's needed
+set guioptions-=Ti " remove toolbar on MacVim
+set guioptions-=r " remove scrollbar on MacVim
+set guioptions-=L " remove scrollbar on MacVim's NERDTree
 
 " main key
 let mapleader=","
@@ -101,7 +104,7 @@ Plugin 'scrooloose/nerdtree' " file system tree
 
 " utils
 Plugin 'sjl/gundo.vim' " keep tracking of all undos
-Plugin 'scrooloose/syntastic.git' " syntax analyzer
+Plugin 'scrooloose/syntastic' " syntax analyzer
 Plugin 'airblade/vim-gitgutter' " mark lines that have been changed according to Git
 Plugin 'tpope/vim-fugitive' " Vim + Git
 Plugin 'tpope/vim-surround' " edit what's surrounding a snippet of code
