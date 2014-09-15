@@ -15,28 +15,28 @@ My ~/.vim directory. It has been customized in order to provide a great experien
 
 # Installation
 
-#### 1\. Clone this repo:
+**1\. Clone this repo:**
 
 ```
 $ cd  ~/
 $ git clone https://github.com/tiagopog/vimfiles.git
 ```
 
-####  2\. Make sure that Vim will find the vimrc file by symlinking it:
+**2\. Make sure that Vim will find the vimrc file by symlinking it:**
 
 ```$ ln -s ~/vimfiles/vimrc ~/.vimrc```
 
-#### 3\. Install Vundle:
+**3\. Install Vundle:**
 
 ```$ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim```
 
 (for more information: https://github.com/gmarik/Vundle.vim)
 
-####  4\. Open Vim, ignoring the warnings, and install the plugins:
+**4\. Open Vim, ignoring the warnings, and install the plugins:**
 
 :PluginInstall
 
-#### 5\. Install and configure some plugin's dependencies:
+**5\. Install and configure some plugin's dependencies:**
 
 - For vim-colorschemes: 
 
