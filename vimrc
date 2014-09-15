@@ -33,7 +33,7 @@ set softtabstop=2 " when hitting tab or backspace, how many spaces should a tab 
 
 let loaded_matchparen=1 " match paranthesis
 
-" GUI-onl-only defaults
+" GUI-only defaults
 if has('gui_running')
   set guifont=Dejavu\ Sans\ Mono\ 9
   set guioptions-=m  "remove menu bar
