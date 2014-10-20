@@ -11,7 +11,7 @@ My ~/.vim directory. It has been customized in order to provide a great experien
 
 # Screenshot
 
-![Vim screenshot](https://s3-us-west-2.amazonaws.com/tiagopog/GitHub/vimfiles/vim.png)
+![Vim screenshot](https://s3-us-west-2.amazonaws.com/tiagopog/GitHub/vimfiles/vim_full.png)
 
 # Installation
 
