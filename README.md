@@ -1,12 +1,14 @@
-My ~/.vim directory. It has been customized in order to provide a great experience of coding on the awesome Vim editor. Enjoy it :-)
+A lean and useful expansion for the awesome Vim editor. Give it a try :-)
 
 # Main features
 
 - Friendly GUI;
-- Code highlighting for: Ruby, JavaScript, CoffeeScript;
-- Frontend code highlighting and snippets for: CSS, Sass;
+- Code highlighting for: Ruby, Python, Java, JavaScript and other languages;
 - Syntax checking;
-- Easy tab management: Command-number (⌘1, ⌘2 etc), Command-Tab (next tab), Command-Shift-Tab (previous tab);
+- Autocomplete;
+- Find a pattern through serveral files (ag.vim);
+- Very fast fuzzy finder (CtrlP);
+- Easy tab management: Command-number (⌘1, ⌘2 etc), Command-Tab (next tab), Command-Shift-Tab (previous tab).
 
 
 # Screenshot
@@ -18,21 +20,31 @@ My ~/.vim directory. It has been customized in order to provide a great experien
 **1\. Clone this repo:**
 
 ```
-$ cd  ~/
-$ git clone https://github.com/tiagopog/vimfiles.git
+cd  /usr/local/etc
+```
+Ps.: if you're on GNU/Linux, you may download it to "/usr/local/src".
+
+```
+git clone https://github.com/tiagopog/vimfiles.git
 ```
 
 **2\. Make sure that Vim will find the vimrc file by symlinking it:**
 
-```$ ln -s ~/vimfiles/vimrc ~/.vimrc```
+```ln -s /usr/local/etc/vimfiles/vimrc ~/.vimrc```
 
 **3\. Install Vundle:**
 
-```$ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim```
+```git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim```
 
 (for more information: https://github.com/gmarik/Vundle.vim)
 
-**4\. Open Vim, ignoring the warnings, and install the plugins:**
+**4\. Open Vim, press ENTER ignoring the warnings, and install the plugins:**
+
+```
+vim .
+```
+
+Then enter:
 
 :PluginInstall
 
@@ -41,13 +53,22 @@ $ git clone https://github.com/tiagopog/vimfiles.git
 - For vim-colorschemes: 
 
 ```
-$ cd ~/.vim
-$ ln -s bundle/vim-colorschemes/colors colors
+cd ~/.vim
+ln -s bundle/vim-colorschemes/colors colors
 ```
 
-- For ag.vim: 
+- For ag.vim:
 
-```$ brew install the_silver_searcher```
+OS X:
+
+```brew install the_silver_searcher```
+
+Ubuntu/Debian:
+
+```apt-get install silversearcher-ag```
+
+CentOS: [try building it from source](https://github.com/ggreer/the_silver_searcher#building-from-source). 
+
 
 - For YouCompleteMe:
 
