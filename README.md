@@ -50,14 +50,14 @@ Then enter:
 
 **5\. Install and configure some plugin's dependencies:**
 
-4.1 For vim-colorschemes: 
+5.1. For vim-colorschemes: 
 
 ```
 cd ~/.vim
 ln -s bundle/vim-colorschemes/colors colors
 ```
 
-- For ag.vim:
+5.2. For ag.vim:
 
 **OS X:**
 
@@ -70,7 +70,7 @@ ln -s bundle/vim-colorschemes/colors colors
 **CentOS:** [try building it from source](https://github.com/ggreer/the_silver_searcher#building-from-source). 
 
 
-- For YouCompleteMe:
+5.3. For YouCompleteMe:
 
 ```
 $ brew install cmake
