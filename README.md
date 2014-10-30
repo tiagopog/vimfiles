@@ -3,13 +3,14 @@ A lean and useful expansion for the awesome Vim editor. Give it a try :-)
 # Main features
 
 - Friendly GUI;
+- Change [colorschemes](http://cocopon.me/app/vim-color-gallery) as you wish ([vim-colorschemes](https://github.com/flazz/vim-colorschemes));
 - Code highlighting for: Ruby, Python, Java, JavaScript and other languages;
 - Syntax checking;
 - Autocomplete;
-- Find a pattern through serveral files (ag.vim);
-- Very fast fuzzy finder (CtrlP);
+- View code line diff instantly ([Git Gutter](http://cache.preserve.io/t395mlry/index.html));
+- Find patterns through serveral files ([ag.vim](https://github.com/rking/ag.vim));
+- Very fast fuzzy finder ([CtrlP](https://github.com/kien/ctrlp.vim));
 - Easy tab management: Command-number (⌘1, ⌘2 etc), Command-Tab (next tab), Command-Shift-Tab (previous tab).
-
 
 # Screenshot
 
