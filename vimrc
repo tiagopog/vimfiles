@@ -101,8 +101,8 @@ call vundle#begin()
 
 " core plugins
 Plugin 'gmarik/Vundle.vim' " Vundle itself
-Plugin 'bling/vim-airline' " bottom bar + tabs
-Plugin 'edkolev/tmuxline.vim' " I'm still not sure about what it really does
+Plugin 'bling/vim-airline' " bottom status bar + tabs
+Plugin 'edkolev/tmuxline.vim' " allows Vim to share its status bar with Tmux
 
 " color schemes and code highlighting
 Plugin 'flazz/vim-colorschemes' " choose the coolest colorscheme
@@ -129,6 +129,8 @@ Plugin 'tpope/vim-abolish' " find/replace on steroids
 Plugin 'Valloric/YouCompleteMe' " autocomplete (needs to install and configure cmake)
 Plugin 'tomtom/tcomment_vim' " comment code
 Plugin 'tpope/vim-endwise' " close 'if', 'def' etc
+Plugin 'christoomey/vim-tmux-navigator' " allows to consistenly navigates between Vim and Tmux split
+Plugin 'thoughtbot/vim-rspec' " lightweight RSpec runner
 
 " end Vundle
 call vundle#end()
@@ -150,6 +152,12 @@ nnoremap <F6> :BufExplorerHorizontalSplit<CR>
 " tComment
 map <C-c> :TComment<CR>
 
+" rspec.vim
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
+
 " CtrlP
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip " ignore file (OSX/Linux)
 let g:ctrlp_custom_ignore = {
@@ -165,6 +173,16 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
+
+let g:rspec_runner = 'os_x_iterm'
+
+" Tmux navigation keybinding
+let g:tmux_navigator_no_mappings = 1
+
+nnoremap <silent> <c-h> :TmuxNavigateLeft<cr>
+nnoremap <silent> <c-j> :TmuxNavigateDown<cr>
+nnoremap <silent> <c-k> :TmuxNavigateUp<cr>
+nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
 
 " open vertical  split and switch to it
 nnoremap <leader>v <C-w>v<C-w>l
