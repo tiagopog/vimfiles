@@ -161,10 +161,10 @@ let g:ctrlp_custom_ignore = {
 map <C-n> :NERDTreeToggle<CR>
 
 " convenient viewport switching
-map <C-h> <C-w>j
-map <C-j> <C-w>k
-map <C-k> <C-w>i
-map <C-l> <C-w>l
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
 
 " open vertical  split and switch to it
 nnoremap <leader>v <C-w>v<C-w>l
