@@ -35,7 +35,7 @@ let loaded_matchparen=1 " match paranthesis
 
 " GUI-only defaults
 if has('gui_running')
-  set guifont=Dejavu\ Sans\ Mono\ 9
+  set guifont=Monaco:h12
   set guioptions-=m  "remove menu bar
   set guioptions-=T  "remove toolbar
   set guioptions-=r  "remove right-hand scroll bar
