@@ -7,6 +7,9 @@ filetype on
 filetype indent on
 filetype plugin on
 
+" enable text highlighting for markdown files
+au BufNewFile,BufRead *.{md,mdown,mkd,mkdn,markdown,mdwn} set filetype=markdown
+
 " defaults
 colorscheme hybrid " set colorscheme
 set encoding=utf-8 " set charset encoding
