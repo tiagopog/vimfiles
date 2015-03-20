@@ -57,7 +57,6 @@ let mapleader=","
 " search
 set hlsearch   " highlight search matches
 set incsearch " search as you type
-set gdefault  " global matching is default
 set smartcase " use smartcase, when search query starts with Uppercase, turn off case insensitive search
 
 " NERDTree
