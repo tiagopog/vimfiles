@@ -1,5 +1,5 @@
 " required
-set nocompatible 
+set nocompatible
 
 syntax on
 
@@ -33,6 +33,7 @@ set lazyredraw " get faster, redraw only when it's needed
 set shiftround " round the indent to shiftwidth (when at 3 spaces, and I hit > go to 4, not 5)
 set shiftwidth=2 " auto-indent amount when using >> <<
 set softtabstop=2 " when hitting tab or backspace, how many spaces should a tab be (see expandtab)
+set cul " highlight the cursor line
 
 let loaded_matchparen=1 " match paranthesis
 
@@ -82,6 +83,15 @@ set expandtab " no real tabs!
 let g:SuperTabDefaultCompletionType = 'context'
 let g:SuperTabContextDefaultCompletionType = '<c-n>'
 
+" vim-diminactive
+let g:diminactive_use_colorcolumn = 1
+
+" enable vim-airline
+let g:airline#extensions#tabline#enabled = 1
+
+" Tmux navigation keybinding
+let g:tmux_navigator_no_mappings = 1
+
 " status
 set laststatus=2
 set statusline=\ "
@@ -114,6 +124,7 @@ Plugin 'kchmck/vim-coffee-script' " CoffeeScript highlighting
 Plugin 'skammer/vim-css-color' " CSS highlighting
 Plugin 'cakebaker/scss-syntax.vim' " SCSS highlighting
 Plugin 'slim-template/vim-slim' " Slim highlighting
+Plugin 'blueyed/vim-diminactive' " dim inactive windows
 
 " file navigation/search
 Plugin 'https://github.com/kien/ctrlp.vim' " awesome fuzzy finder
@@ -141,9 +152,6 @@ filetype plugin indent on
 ""
 " key mapping & stuff
 ""
-
-" enable vim-airline
-let g:airline#extensions#tabline#enabled = 1
 
 " Gundo
 nnoremap <F5> :GundoToggle<CR>
@@ -177,9 +185,6 @@ nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
 let g:rspec_runner = 'os_x_iterm'
-
-" Tmux navigation keybinding
-let g:tmux_navigator_no_mappings = 1
 
 nnoremap <silent> <c-h> :TmuxNavigateLeft<cr>
 nnoremap <silent> <c-j> :TmuxNavigateDown<cr>
