@@ -3,7 +3,7 @@ A lean and useful expansion for the awesome Vim editor. Give it a try :-)
 # Main features
 
 - Friendly GUI;
-- Change [colorschemes](http://cocopon.me/app/vim-color-gallery) as you wish ([vim-colorschemes](https://github.com/flazz/vim-colorschemes));
+- Change [colorschemes](http://cocopon.me/app/vim-color-gallery/) as you wish ([vim-colorschemes](https://github.com/flazz/vim-colorschemes));
 - Code highlighting for: Ruby, Python, Java, JavaScript and other languages;
 - Syntax checking;
 - Autocomplete;
