@@ -125,12 +125,14 @@ Plugin 'skammer/vim-css-color' " CSS highlighting
 Plugin 'cakebaker/scss-syntax.vim' " SCSS highlighting
 Plugin 'slim-template/vim-slim' " Slim highlighting
 Plugin 'blueyed/vim-diminactive' " dim inactive windows
+Plugin 'nathanaelkane/vim-indent-guides'
 
 " file navigation/search
 Plugin 'https://github.com/kien/ctrlp.vim' " awesome fuzzy finder
 Plugin 'jlanzarotta/bufexplorer' " search for files that have been changed
 Plugin 'rking/ag.vim' " search for a pattern through the directories (need to install the_silver_searcher)
 Plugin 'scrooloose/nerdtree' " file system tree
+Plugin 'vim-scripts/SearchComplete' " autocomplete for '/' searches
 
 " utils
 Plugin 'sjl/gundo.vim' " keep tracking of all undos
