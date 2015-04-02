@@ -1,5 +1,3 @@
-A lean and useful expansion for the awesome Vim editor. Give it a try :-)
-
 # Main features
 
 - Friendly GUI;
@@ -13,9 +11,12 @@ A lean and useful expansion for the awesome Vim editor. Give it a try :-)
 - Fast fuzzy finder ([CtrlP](https://github.com/kien/ctrlp.vim));
 - Easy tab management: Command-number (⌘1, ⌘2 etc), Command-Tab (next tab), Command-Shift-Tab (previous tab).
 
+Give it a try :-)
+
 # Screenshot
 
 ![Vim screenshot](https://s3-us-west-2.amazonaws.com/tiagopog/GitHub/vimfiles/vim-screenchot.png)
+
 
 # Installation
 
