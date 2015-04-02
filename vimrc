@@ -155,6 +155,12 @@ filetype plugin indent on
 " key mapping & stuff
 ""
 
+" ease life enabling the use of some upercase letter commands
+cab Q! q!
+cab Q q
+cab W! w!
+cab W w
+
 " Gundo
 nnoremap <F5> :GundoToggle<CR>
 
