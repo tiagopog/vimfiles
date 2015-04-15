@@ -133,6 +133,7 @@ Plugin 'jlanzarotta/bufexplorer' " search for files that have been changed
 Plugin 'rking/ag.vim' " search for a pattern through the directories (need to install the_silver_searcher)
 Plugin 'scrooloose/nerdtree' " file system tree
 Plugin 'vim-scripts/SearchComplete' " autocomplete for '/' searches
+Plugin 'majutsushi/tagbar' " Vim plugin that displays tags in a window, ordered by scope
 
 " utils
 Plugin 'sjl/gundo.vim' " keep tracking of all undos
@@ -177,11 +178,15 @@ map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 
 " CtrlP
+nnoremap <leader>. :CtrlPTag<cr>
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip " ignore file (OSX/Linux)
 let g:ctrlp_custom_ignore = {
       \ 'dir':  '\v[\/]\.(git|hg|svn)$',
       \ 'file': '\v\.(exe|so|dll)$'
       \ }
+
+" CTags
+nnoremap <silent> <Leader>b :TagbarToggle<CR>
 
 " NERDTree
 map <C-n> :NERDTreeToggle<CR>
