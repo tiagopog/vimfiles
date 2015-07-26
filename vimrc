@@ -118,12 +118,13 @@ Plugin 'edkolev/tmuxline.vim' " allows Vim to share its status bar with Tmux
 
 " color schemes and code highlighting
 Plugin 'flazz/vim-colorschemes' " choose the coolest colorscheme
-Plugin 'vim-ruby/vim-ruby' " Ruby highlighting
-Plugin 'jelera/vim-javascript-syntax' " JavaScript highlighting
-Plugin 'kchmck/vim-coffee-script' " CoffeeScript highlighting
-Plugin 'skammer/vim-css-color' " CSS highlighting
-Plugin 'cakebaker/scss-syntax.vim' " SCSS highlighting
-Plugin 'slim-template/vim-slim' " Slim highlighting
+Plugin 'vim-ruby/vim-ruby' " Ruby code highlighting
+Plugin 'jelera/vim-javascript-syntax' " JavaScript code highlighting
+Plugin 'keith/swift.vim' " Swift code highlighting
+Plugin 'kchmck/vim-coffee-script' " CoffeeScript code highlighting
+Plugin 'skammer/vim-css-color' " CSS code highlighting
+Plugin 'cakebaker/scss-syntax.vim' " SCSS code highlighting
+Plugin 'slim-template/vim-slim' " Slim code highlighting
 Plugin 'blueyed/vim-diminactive' " dim inactive windows
 Plugin 'nathanaelkane/vim-indent-guides'
 
