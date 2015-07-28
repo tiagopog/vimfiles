@@ -34,6 +34,7 @@ set shiftround " round the indent to shiftwidth (when at 3 spaces, and I hit > g
 set shiftwidth=2 " auto-indent amount when using >> <<
 set softtabstop=2 " when hitting tab or backspace, how many spaces should a tab be (see expandtab)
 set cul " highlight the cursor line
+set shell=/bin/sh
 
 let loaded_matchparen=1 " match paranthesis
 
@@ -120,7 +121,7 @@ Plugin 'edkolev/tmuxline.vim' " allows Vim to share its status bar with Tmux
 Plugin 'flazz/vim-colorschemes' " choose the coolest colorscheme
 Plugin 'vim-ruby/vim-ruby' " Ruby code highlighting
 Plugin 'jelera/vim-javascript-syntax' " JavaScript code highlighting
-Plugin 'keith/swift.vim' " Swift code highlighting
+Plugin 'toyamarinyon/vim-swift' " Swift code highlighting
 Plugin 'kchmck/vim-coffee-script' " CoffeeScript code highlighting
 Plugin 'skammer/vim-css-color' " CSS code highlighting
 Plugin 'cakebaker/scss-syntax.vim' " SCSS code highlighting
@@ -137,6 +138,7 @@ Plugin 'vim-scripts/SearchComplete' " autocomplete for '/' searches
 Plugin 'majutsushi/tagbar' " Vim plugin that displays tags in a window, ordered by scope
 
 " utils
+Plugin 'janko-m/vim-test' " wrapper for running tests on different granularities
 Plugin 'sjl/gundo.vim' " keep tracking of all undos
 Plugin 'scrooloose/syntastic' " syntax analyzer
 Plugin 'airblade/vim-gitgutter' " mark lines that have been changed according to Git

@@ -83,3 +83,12 @@ $ cd ycm_build
 $ cmake -G "Unix Makefiles" . ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp
 $ make ycm_support_libs
 ```
+
+5.4. Ruby + RVM:
+
+As Vim loads your shell with `set shell=/bin/sh`, just make sure that your shell's `.profile`
+loads the RVM scripts.
+
+# TODO
+
+* Create a simple cheatsheet with the main commands for each plugin.
