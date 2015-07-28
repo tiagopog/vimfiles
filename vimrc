@@ -34,7 +34,7 @@ set shiftround " round the indent to shiftwidth (when at 3 spaces, and I hit > g
 set shiftwidth=2 " auto-indent amount when using >> <<
 set softtabstop=2 " when hitting tab or backspace, how many spaces should a tab be (see expandtab)
 set cul " highlight the cursor line
-set shell=/bin/sh
+set shell=/bin/sh " load shell
 
 let loaded_matchparen=1 " match paranthesis
 
@@ -93,6 +93,9 @@ let g:airline#extensions#tabline#enabled = 1
 " Tmux navigation keybinding
 let g:tmux_navigator_no_mappings = 1
 
+" Use the test strategy that fits you better: https://github.com/janko-m/vim-test#strategies
+let test#strategy = 'basic'
+
 " status
 set laststatus=2
 set statusline=\ "
@@ -116,6 +119,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim' " Vundle itself
 Plugin 'bling/vim-airline' " bottom status bar + tabs
 Plugin 'edkolev/tmuxline.vim' " allows Vim to share its status bar with Tmux
+Plugin 'tpope/vim-dispatch' " asynchronous build and test dispatcher
 
 " color schemes and code highlighting
 Plugin 'flazz/vim-colorschemes' " choose the coolest colorscheme
@@ -219,6 +223,9 @@ nnoremap <c-s> :w<cr>
 " Quit like a pro
 nnoremap <C-M-q> :Kwbd<CR>
 nnoremap <leader>q :q<CR>
+
+" run tests (vim-test)
+nmap <silent> <leader>T :TestFile<CR>
 
 " upper/lower word
 nmap <leader>u mQviwU`Q
