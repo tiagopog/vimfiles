@@ -4,11 +4,13 @@ set nocompatible
 syntax on
 
 filetype on
-filetype indent on
-filetype plugin on
+filetype indent plugin on
 
 " enable text highlighting for markdown files
 au BufNewFile,BufRead *.{md,mdown,mkd,mkdn,markdown,mdwn} set filetype=markdown
+
+" enable text highlighting for slim files
+autocmd BufNewFile,BufRead *.slim set ft=slim
 
 " defaults
 colorscheme hybrid " set colorscheme
@@ -157,7 +159,6 @@ Plugin 'thoughtbot/vim-rspec' " lightweight RSpec runner
 
 " end Vundle
 call vundle#end()
-filetype plugin indent on
 
 ""
 " key mapping & stuff
