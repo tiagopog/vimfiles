@@ -1,9 +1,8 @@
 " required
 set nocompatible
 
-syntax on
-
-filetype on
+syntax enable
+filetype off
 filetype indent plugin on
 
 " enable text highlighting for markdown files
