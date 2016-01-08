@@ -125,6 +125,7 @@ Plugin 'tpope/vim-dispatch' " asynchronous build and test dispatcher
 " color schemes and code highlighting
 Plugin 'flazz/vim-colorschemes' " choose the coolest colorscheme
 Plugin 'vim-ruby/vim-ruby' " Ruby code highlighting
+Plugin 'elixir-lang/vim-elixir' " Elixir code highlighting
 Plugin 'jelera/vim-javascript-syntax' " JavaScript code highlighting
 Plugin 'toyamarinyon/vim-swift' " Swift code highlighting
 Plugin 'kchmck/vim-coffee-script' " CoffeeScript code highlighting
@@ -158,6 +159,8 @@ Plugin 'thoughtbot/vim-rspec' " lightweight RSpec runner
 
 " end Vundle
 call vundle#end()
+
+filetype on
 
 ""
 " key mapping & stuff
