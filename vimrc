@@ -7,9 +7,10 @@ filetype indent plugin on
 
 " enable text highlighting for markdown files
 au BufNewFile,BufRead *.{md,mdown,mkd,mkdn,markdown,mdwn} set filetype=markdown
+au BufNewFile,BufRead *.{ex,exs,eex} set filetype=elixir
 
 " enable text highlighting for slim files
-autocmd BufNewFile,BufRead *.slim set ft=slim
+autocmd BufNewFile,BufRead *.slim set filetype=slim
 
 " defaults
 colorscheme hybrid " set colorscheme
