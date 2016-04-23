@@ -20,11 +20,13 @@ set showmode " show current mode down the bottom
 set gcr=a:blinkon0 " disable cursor blink
 set visualbell " the sound of silence
 set autoread " reload files changed outside Vim
-set hidden " buffers can exist in the background without being in a window
+set hidden " hide buffers instead of closing them so that you can have unwritten changes to a file and open a new one
 set list listchars=tab:\ \ ,trail:· " display tabs and trailing spaces visually
 set nowrap " don't wrap lines
 set linebreak " wrap lines at convenient points
 set equalalways " split windows equally
+set splitbelow " open horizontal split below the current one
+set splitright " open vertical split at the right of the current one
 set wildignore=*.o,*.obj,*.bak,*.exe,*.pyc,*.jpg,*.gif,*.png " there files will be ignored when completing in wild menu
 set clipboard+=unnamed,unnamedplus,autoselect " share clipboard
 set ttyfast " I  got a fast terminal!
@@ -33,6 +35,8 @@ set lazyredraw " get faster, redraw only when it's needed
 set shiftround " round the indent to shiftwidth (when at 3 spaces, and I hit > go to 4, not 5)
 set shiftwidth=2 " auto-indent amount when using >> <<
 set softtabstop=2 " when hitting tab or backspace, how many spaces should a tab be (see expandtab)
+set cul " highlight the cursor line
+set shell=/bin/sh " load shell
 
 let loaded_matchparen=1 " match paranthesis
 
