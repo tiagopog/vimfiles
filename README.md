@@ -1,20 +1,22 @@
-A lean and useful expansion for the awesome Vim editor. Give it a try :-)
-
 # Main features
 
 - Friendly GUI;
-- Change [colorschemes](http://cocopon.me/app/vim-color-gallery) as you wish ([vim-colorschemes](https://github.com/flazz/vim-colorschemes));
+- Change [colorschemes](http://cocopon.me/app/vim-color-gallery/) as you wish ([vim-colorschemes](https://github.com/flazz/vim-colorschemes));
 - Code highlighting for: Ruby, Python, Java, JavaScript and other languages;
-- Syntax checking;
-- Autocomplete;
+- Visually displays indent levels in code ([vim-indent-guides](https://github.com/nathanaelkane/vim-indent-guides));
+- Syntax checking ([Synstatic](https://github.com/scrooloose/syntastic));
+- Autocomplete ([YouCompleteMe](https://github.com/Valloric/YouCompleteMe));
 - View code line diff instantly ([Git Gutter](http://cache.preserve.io/t395mlry/index.html));
 - Find patterns through serveral files ([ag.vim](https://github.com/rking/ag.vim));
-- Very fast fuzzy finder ([CtrlP](https://github.com/kien/ctrlp.vim));
+- Fast fuzzy finder ([CtrlP](https://github.com/kien/ctrlp.vim));
 - Easy tab management: Command-number (⌘1, ⌘2 etc), Command-Tab (next tab), Command-Shift-Tab (previous tab).
+
+Give it a try :-)
 
 # Screenshot
 
-![Vim screenshot](https://s3-us-west-2.amazonaws.com/tiagopog/GitHub/vimfiles/vim_full.png)
+![Vim screenshot](https://s3-us-west-2.amazonaws.com/tiagopog/GitHub/vimfiles/vim-screenchot.png)
+
 
 # Installation
 
@@ -81,3 +83,15 @@ $ cd ycm_build
 $ cmake -G "Unix Makefiles" . ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp
 $ make ycm_support_libs
 ```
+
+5.4. Ruby + RVM:
+
+As Vim loads your shell with `set shell=/bin/sh`, just make sure that your shell's `.profile`
+loads the RVM scripts.
+
+# TODO
+
+* Create a simple cheatsheet with the main commands for each plugin;
+* Run [vim-test](https://github.com/janko-m/vim-test) coupled with [vim-dispatch](https://github.com/tpope/vim-dispatch);
+* Integrate Vim with [Rubocop](https://github.com/ngmy/vim-rubocop);
+* Integrate Vim with [Reek](https://github.com/rainerborene/vim-reek).

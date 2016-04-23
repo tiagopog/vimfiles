@@ -1,14 +1,16 @@
 " required
-set nocompatible 
+set nocompatible
 
-syntax on
-
-filetype on
-filetype indent on
-filetype plugin on
+syntax enable
+filetype off
+filetype indent plugin on
 
 " enable text highlighting for markdown files
 au BufNewFile,BufRead *.{md,mdown,mkd,mkdn,markdown,mdwn} set filetype=markdown
+au BufNewFile,BufRead *.{ex,exs,eex} set filetype=elixir
+
+" enable text highlighting for slim files
+autocmd BufNewFile,BufRead *.slim set filetype=slim
 
 " defaults
 colorscheme hybrid " set colorscheme
@@ -61,7 +63,6 @@ let mapleader=","
 " search
 set hlsearch   " highlight search matches
 set incsearch " search as you type
-set gdefault  " global matching is default
 set smartcase " use smartcase, when search query starts with Uppercase, turn off case insensitive search
 
 " NERDTree
@@ -87,6 +88,18 @@ set expandtab " no real tabs!
 let g:SuperTabDefaultCompletionType = 'context'
 let g:SuperTabContextDefaultCompletionType = '<c-n>'
 
+" vim-diminactive
+let g:diminactive_use_colorcolumn = 1
+
+" enable vim-airline
+let g:airline#extensions#tabline#enabled = 1
+
+" Tmux navigation keybinding
+let g:tmux_navigator_no_mappings = 1
+
+" Use the test strategy that fits you better: https://github.com/janko-m/vim-test#strategies
+let test#strategy = 'basic'
+
 " status
 set laststatus=2
 set statusline=\ "
@@ -110,23 +123,31 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim' " Vundle itself
 Plugin 'bling/vim-airline' " bottom status bar + tabs
 Plugin 'edkolev/tmuxline.vim' " allows Vim to share its status bar with Tmux
+Plugin 'tpope/vim-dispatch' " asynchronous build and test dispatcher
 
 " color schemes and code highlighting
 Plugin 'flazz/vim-colorschemes' " choose the coolest colorscheme
-Plugin 'vim-ruby/vim-ruby' " Ruby highlighting
-Plugin 'jelera/vim-javascript-syntax' " JavaScript highlighting
-Plugin 'kchmck/vim-coffee-script' " CoffeeScript highlighting
-Plugin 'skammer/vim-css-color' " CSS highlighting
-Plugin 'cakebaker/scss-syntax.vim' " SCSS highlighting
-Plugin 'slim-template/vim-slim' " Slim highlighting
+Plugin 'vim-ruby/vim-ruby' " Ruby code highlighting
+Plugin 'elixir-lang/vim-elixir' " Elixir code highlighting
+Plugin 'jelera/vim-javascript-syntax' " JavaScript code highlighting
+Plugin 'toyamarinyon/vim-swift' " Swift code highlighting
+Plugin 'kchmck/vim-coffee-script' " CoffeeScript code highlighting
+Plugin 'skammer/vim-css-color' " CSS code highlighting
+Plugin 'cakebaker/scss-syntax.vim' " SCSS code highlighting
+Plugin 'slim-template/vim-slim' " Slim code highlighting
+Plugin 'blueyed/vim-diminactive' " dim inactive windows
+Plugin 'nathanaelkane/vim-indent-guides'
 
 " file navigation/search
 Plugin 'https://github.com/kien/ctrlp.vim' " awesome fuzzy finder
 Plugin 'jlanzarotta/bufexplorer' " search for files that have been changed
 Plugin 'rking/ag.vim' " search for a pattern through the directories (need to install the_silver_searcher)
 Plugin 'scrooloose/nerdtree' " file system tree
+Plugin 'vim-scripts/SearchComplete' " autocomplete for '/' searches
+Plugin 'majutsushi/tagbar' " Vim plugin that displays tags in a window, ordered by scope
 
 " utils
+Plugin 'janko-m/vim-test' " wrapper for running tests on different granularities
 Plugin 'sjl/gundo.vim' " keep tracking of all undos
 Plugin 'scrooloose/syntastic' " syntax analyzer
 Plugin 'airblade/vim-gitgutter' " mark lines that have been changed according to Git
@@ -141,14 +162,18 @@ Plugin 'thoughtbot/vim-rspec' " lightweight RSpec runner
 
 " end Vundle
 call vundle#end()
-filetype plugin indent on
+
+filetype on
 
 ""
 " key mapping & stuff
 ""
 
-" enable vim-airline
-let g:airline#extensions#tabline#enabled = 1
+" ease life enabling the use of some upercase letter commands
+cab Q! q!
+cab Q q
+cab W! w!
+cab W w
 
 " Gundo
 nnoremap <F5> :GundoToggle<CR>
@@ -166,11 +191,15 @@ map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 
 " CtrlP
+nnoremap <leader>. :CtrlPTag<cr>
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip " ignore file (OSX/Linux)
 let g:ctrlp_custom_ignore = {
       \ 'dir':  '\v[\/]\.(git|hg|svn)$',
       \ 'file': '\v\.(exe|so|dll)$'
       \ }
+
+" CTags
+nnoremap <silent> <Leader>b :TagbarToggle<CR>
 
 " NERDTree
 map <C-n> :NERDTreeToggle<CR>
@@ -182,9 +211,6 @@ nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
 let g:rspec_runner = 'os_x_iterm'
-
-" Tmux navigation keybinding
-let g:tmux_navigator_no_mappings = 1
 
 nnoremap <silent> <c-h> :TmuxNavigateLeft<cr>
 nnoremap <silent> <c-j> :TmuxNavigateDown<cr>
@@ -203,6 +229,9 @@ nnoremap <c-s> :w<cr>
 " Quit like a pro
 nnoremap <C-M-q> :Kwbd<CR>
 nnoremap <leader>q :q<CR>
+
+" run tests (vim-test)
+nmap <silent> <leader>T :TestFile<CR>
 
 " upper/lower word
 nmap <leader>u mQviwU`Q
