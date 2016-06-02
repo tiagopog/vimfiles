@@ -28,7 +28,6 @@ set nowrap " don't wrap lines
 set linebreak " wrap lines at convenient points
 set equalalways " split windows equally
 set splitbelow " open horizontal split below the current one
-set splitright " open vertical split at the right of the current one
 set wildignore=*.o,*.obj,*.bak,*.exe,*.pyc,*.jpg,*.gif,*.png " there files will be ignored when completing in wild menu
 set clipboard+=unnamed,unnamedplus,autoselect " share clipboard
 set ttyfast " I  got a fast terminal!
