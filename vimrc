@@ -159,6 +159,7 @@ Plugin 'tpope/vim-endwise' " close 'if', 'def' etc
 Plugin 'christoomey/vim-tmux-navigator' " allows to consistenly navigates between Vim and Tmux split
 Plugin 'thoughtbot/vim-rspec' " lightweight RSpec runner
 Plugin 'ConradIrwin/vim-bracketed-paste' " bracketed paste mode for pasting text properly in Vim
+Plugin 'danro/rename.vim' " rename files with ease
 
 " end Vundle
 call vundle#end()
