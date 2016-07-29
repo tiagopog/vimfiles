@@ -91,7 +91,7 @@ loads the RVM scripts.
 
 # TODO
 
-* Create an install.sh in order to ease the installation step;
+* Create (install|update).sh files in order to ease the (installation|updating) process;
 * Create a simple cheatsheet with the main commands for each plugin;
 * Run [vim-test](https://github.com/janko-m/vim-test) coupled with [vim-dispatch](https://github.com/tpope/vim-dispatch);
 * Integrate Vim with [Rubocop](https://github.com/ngmy/vim-rubocop);
