@@ -2,15 +2,19 @@
 set nocompatible
 
 syntax enable
+
 filetype off
 filetype indent plugin on
 
-" enable text highlighting for markdown files
+" enable syntax highlighting for markdown files
 au BufNewFile,BufRead *.{md,mdown,mkd,mkdn,markdown,mdwn} set filetype=markdown
 au BufNewFile,BufRead *.{ex,exs,eex} set filetype=elixir
 
-" enable text highlighting for slim files
+" enable syntax highlighting for slim files
 autocmd BufNewFile,BufRead *.slim set filetype=slim
+
+" enable syntax highlighting for Dockerfile
+autocmd BufNewFile,BufRead Dockerfile set filetype=dockerfile
 
 " defaults
 colorscheme hybrid " set colorscheme
@@ -135,6 +139,7 @@ Plugin 'skammer/vim-css-color' " CSS code highlighting
 Plugin 'cakebaker/scss-syntax.vim' " SCSS code highlighting
 Plugin 'slim-template/vim-slim' " Slim code highlighting
 Plugin 'blueyed/vim-diminactive' " dim inactive windows
+Plugin 'ekalinin/Dockerfile.vim' " syntax highlighting for Dockerfile
 Plugin 'nathanaelkane/vim-indent-guides'
 
 " file navigation/search
