@@ -14,7 +14,7 @@ au BufNewFile,BufRead *.{ex,exs,eex} set filetype=elixir
 autocmd BufNewFile,BufRead *.slim set filetype=slim
 
 " enable syntax highlighting for Dockerfile
-autocmd BufNewFile,BufRead Dockerfile set filetype=dockerfile
+autocmd BufNewFile,BufRead Dockerfile* set filetype=dockerfile
 
 " defaults
 colorscheme hybrid " set colorscheme
