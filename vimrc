@@ -9,6 +9,7 @@ filetype indent plugin on
 " enable syntax highlighting for markdown files
 au BufNewFile,BufRead *.{md,mdown,mkd,mkdn,markdown,mdwn} set filetype=markdown
 au BufNewFile,BufRead *.{ex,exs,eex} set filetype=elixir
+au BufNewFile,BufRead *.go set filetype=go
 
 " enable syntax highlighting for slim files
 autocmd BufNewFile,BufRead *.slim set filetype=slim
@@ -133,6 +134,7 @@ Plugin 'flazz/vim-colorschemes' " choose the coolest colorscheme
 Plugin 'vim-ruby/vim-ruby' " Ruby code highlighting
 Plugin 'elixir-lang/vim-elixir' " Elixir code highlighting
 Plugin 'jelera/vim-javascript-syntax' " JavaScript code highlighting
+Plugin 'fatih/vim-go' " Go code highlighting
 Plugin 'toyamarinyon/vim-swift' " Swift code highlighting
 Plugin 'kchmck/vim-coffee-script' " CoffeeScript code highlighting
 Plugin 'skammer/vim-css-color' " CSS code highlighting
@@ -259,21 +261,14 @@ map <C-M-n> :tabedit %<CR>
 " map <C-l> :tabnext<cr>
 " map <C-h> :tabprevious<cr>
 
-if has("gui_macvim")
-  " Press Ctrl-Tab to switch between open tabs (like browser tabs) to
-  " the right side. Ctrl-Shift-Tab goes the other way.
-  noremap <C-Tab> :tabnext<CR>
-  noremap <C-S-Tab> :tabprev<CR>
-
-  " switch to specific tab numbers with Command-number
-  noremap <D-1> :tabn 1<CR>
-  noremap <D-2> :tabn 2<CR>
-  noremap <D-3> :tabn 3<CR>
-  noremap <D-4> :tabn 4<CR>
-  noremap <D-5> :tabn 5<CR>
-  noremap <D-6> :tabn 6<CR>
-  noremap <D-7> :tabn 7<CR>
-  noremap <D-8> :tabn 8<CR>
-  noremap <D-9> :tabn 9<CR>
-endif
+" Tab control
+noremap <leader>1 :tabn 1<CR>
+noremap <leader>2 :tabn 2<CR>
+noremap <leader>3 :tabn 3<CR>
+noremap <leader>4 :tabn 4<CR>
+noremap <leader>5 :tabn 5<CR>
+noremap <leader>6 :tabn 6<CR>
+noremap <leader>7 :tabn 7<CR>
+noremap <leader>8 :tabn 8<CR>
+noremap <leader>9 :tabn 9<CR>
 
