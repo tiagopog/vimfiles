@@ -76,12 +76,8 @@ ln -s bundle/vim-colorschemes/colors colors
 5.3. For YouCompleteMe:
 
 ```
-$ brew install cmake
-$ cd ~
-$ mkdir ycm_build
-$ cd ycm_build
-$ cmake -G "Unix Makefiles" . ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp
-$ make ycm_support_libs
+$ cd ~/.vim/bundle/YouCompleteMe
+$ ./install.py
 ```
 
 5.4. Ruby + RVM:
