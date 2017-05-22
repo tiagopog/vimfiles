@@ -158,6 +158,7 @@ Plugin 'sjl/gundo.vim' " keep tracking of all undos
 Plugin 'scrooloose/syntastic' " syntax analyzer
 Plugin 'airblade/vim-gitgutter' " mark lines that have been changed according to Git
 Plugin 'tpope/vim-fugitive' " Vim + Git
+Plugin 'tpope/vim-rhubarb' " Vim + GitHub
 Plugin 'tpope/vim-surround' " edit what's surrounding a snippet of code
 Plugin 'tpope/vim-abolish' " find/replace on steroids
 Plugin 'Valloric/YouCompleteMe' " autocomplete (needs to install and configure cmake)
