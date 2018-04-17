@@ -10,6 +10,7 @@ filetype indent plugin on
 au BufNewFile,BufRead *.{md,mdown,mkd,mkdn,markdown,mdwn} set filetype=markdown
 au BufNewFile,BufRead *.{ex,exs,eex} set filetype=elixir
 au BufNewFile,BufRead *.go set filetype=go
+au BufNewFile,BufRead *.cr set filetype=crystal
 
 " enable syntax highlighting for slim files
 autocmd BufNewFile,BufRead *.slim set filetype=slim
@@ -126,8 +127,6 @@ call vundle#begin()
 " core plugins
 Plugin 'gmarik/Vundle.vim' " Vundle itself
 Plugin 'bling/vim-airline' " bottom status bar + tabs
-Plugin 'edkolev/tmuxline.vim' " allows Vim to share its status bar with Tmux
-Plugin 'tpope/vim-dispatch' " asynchronous build and test dispatcher
 
 " color schemes and code highlighting
 Plugin 'flazz/vim-colorschemes' " choose the coolest colorscheme
@@ -137,6 +136,7 @@ Plugin 'jelera/vim-javascript-syntax' " JavaScript code highlighting
 Plugin 'fatih/vim-go' " Go code highlighting
 Plugin 'toyamarinyon/vim-swift' " Swift code highlighting
 Plugin 'kchmck/vim-coffee-script' " CoffeeScript code highlighting
+Plugin 'rhysd/vim-crystal' " Crystal code highlighting & Utils
 Plugin 'skammer/vim-css-color' " CSS code highlighting
 Plugin 'cakebaker/scss-syntax.vim' " SCSS code highlighting
 Plugin 'slim-template/vim-slim' " Slim code highlighting
@@ -146,14 +146,11 @@ Plugin 'nathanaelkane/vim-indent-guides'
 
 " file navigation/search
 Plugin 'https://github.com/kien/ctrlp.vim' " awesome fuzzy finder
-Plugin 'jlanzarotta/bufexplorer' " search for files that have been changed
 Plugin 'rking/ag.vim' " search for a pattern through the directories (need to install the_silver_searcher)
 Plugin 'scrooloose/nerdtree' " file system tree
 Plugin 'vim-scripts/SearchComplete' " autocomplete for '/' searches
-Plugin 'majutsushi/tagbar' " Vim plugin that displays tags in a window, ordered by scope
 
 " utils
-Plugin 'janko-m/vim-test' " wrapper for running tests on different granularities
 Plugin 'sjl/gundo.vim' " keep tracking of all undos
 Plugin 'scrooloose/syntastic' " syntax analyzer
 Plugin 'airblade/vim-gitgutter' " mark lines that have been changed according to Git
@@ -161,11 +158,10 @@ Plugin 'tpope/vim-fugitive' " Vim + Git
 Plugin 'tpope/vim-rhubarb' " Vim + GitHub
 Plugin 'tpope/vim-surround' " edit what's surrounding a snippet of code
 Plugin 'tpope/vim-abolish' " find/replace on steroids
-Plugin 'Valloric/YouCompleteMe' " autocomplete (needs to install and configure cmake)
+" Plugin 'Valloric/YouCompleteMe' " autocomplete (needs to install and configure cmake)
 Plugin 'tomtom/tcomment_vim' " comment code
 Plugin 'tpope/vim-endwise' " close 'if', 'def' etc
 Plugin 'christoomey/vim-tmux-navigator' " allows to consistenly navigates between Vim and Tmux split
-Plugin 'thoughtbot/vim-rspec' " lightweight RSpec runner
 Plugin 'ConradIrwin/vim-bracketed-paste' " bracketed paste mode for pasting text properly in Vim
 Plugin 'danro/rename.vim' " rename files with ease
 
