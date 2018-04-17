@@ -33,6 +33,22 @@ set hlsearch  " Highlight search matches
 set incsearch " Search as you type
 set smartcase " Use smartcase, when search query starts with Uppercase, turn off case insensitive search
 
+" Clipboard
+
+set clipboard+=unnamedplus
+
+" Copy to clipboard
+vnoremap  <leader>y  "+y
+nnoremap  <leader>Y  "+yg_
+nnoremap  <leader>y  "+y
+nnoremap  <leader>yy  "+yy
+
+" Paste from clipboard
+nnoremap <leader>p "+p
+nnoremap <leader>P "+P
+vnoremap <leader>p "+p
+vnoremap <leader>P "+P
+
 " Indentation
 set autoindent
 set smartindent
@@ -65,13 +81,13 @@ set scrolloff=8 " Start scrolling when it's 8 lines away from margins
 set sidescrolloff=15
 set sidescroll=1
 
-" Convenient viewport switching
+" Viewport switching
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
-" Status
+" Status bar
 set laststatus=2
 set statusline=\ "
 set statusline+=%f\ " file name
@@ -93,14 +109,14 @@ nnoremap <silent> <c-j> :TmuxNavigateDown<cr>
 nnoremap <silent> <c-k> :TmuxNavigateUp<cr>
 nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
 
-" Splits:
+" Splits
 
 " Open vertical  split and switch to it
 nnoremap <leader>v <C-w>v<C-w>l
 " Open horizontal  split and switch to it
 nnoremap <leader>h :split<CR>
 
-" Other:
+" Other
 
 " Save like a pro (CTRL+s)
 nnoremap <c-s> :w<cr>
