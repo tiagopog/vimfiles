@@ -182,6 +182,7 @@ Plug 'tpope/vim-surround'                 " Edit what's surrounding a snippet of
 Plug 'tomtom/tcomment_vim'                " Comment code lika a boss
 Plug 'tpope/vim-endwise'                  " Close 'if', 'def' etc
 Plug 'christoomey/vim-tmux-navigator'     " Allows to consistenly navigates between Vim and Tmux split
+Plug 'elixir-lang/vim-elixir'             " Syntax highlighting for Elixir
 call plug#end()
 
 " nerdtree
