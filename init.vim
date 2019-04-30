@@ -118,6 +118,9 @@ nnoremap <leader>h :split<CR>
 
 " Other
 
+" Autoread files when changing buffers while inside Vim
+au FocusGained,BufEnter * :checktime
+
 " Save like a pro (CTRL+s)
 nnoremap <c-s> :w<cr>
 
@@ -165,7 +168,6 @@ endif
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'mhartington/oceanic-next'           " Color scheme
 Plug 'ctrlpvim/ctrlp.vim'                 " Fuzzy finder
-Plug 'roxma/nvim-completion-manager'      " Async completion framework for Neovim
 Plug 'SirVer/ultisnips'                   " Fast snippet solution for Vim (requires Python)
 Plug 'honza/vim-snippets'                 " Snippets for various programming languages
 Plug 'brooth/far.vim'                     " Find and replace text through multiple files
@@ -185,9 +187,16 @@ Plug 'christoomey/vim-tmux-navigator'     " Allows to consistenly navigates betw
 Plug 'elixir-lang/vim-elixir'             " Syntax highlighting for Elixir
 Plug 'rhysd/vim-crystal'                  " Syntax highlighting for Crystal
 Plug 'jparise/vim-graphql'                " Syntax highlighting for GraphQL
+Plug 'tmux-plugins/vim-tmux-focus-events' " Used for automatically refreshing code in the editor
+Plug 'roxma/nvim-yarp'                    " Python framework ease writing Vim plugins
+Plug 'ncm2/ncm2'                          " Async completion framework for Neovim
+Plug 'ncm2/ncm2-bufword'                  " Completion – Words from current buffer
+Plug 'ncm2/ncm2-path'                     " Completion – Path
+Plug 'pbogut/ncm2-alchemist'              " Completion – Elixir
+Plug 'ncm2/ncm2-jedi'                     " Completion – Python
 call plug#end()
 
-" nerdtree
+" File tree (nerdtree)
 let g:nerdtree_tabs_open_on_console_startup=1
 let g:nerdtree_tabs_smart_startup_focus=1
 map <C-n> :NERDTreeToggle<CR>
@@ -195,12 +204,24 @@ map <C-n> :NERDTreeToggle<CR>
 " vim-airline
 let g:airline#extensions#tabline#enabled=1
 
-" gundo.vim
+" Changes control (gundo.vim)
 nnoremap <F5> :GundoToggle<CR>
 
 
-" tcomment_vim
+" Comments (tcomment_vim)
 map <C-c> :TComment<CR>
 
-" ag.vim
+" Search (ag.vim)
 nnoremap <leader>a :Ag 
+
+" Completion (NCM2)
+
+" Enable ncm2 for all buffers
+autocmd BufEnter * call ncm2#enable_for_buffer()
+set completeopt=noinsert,menuone,noselect
+
+" Suppress the annoying 'match x of y', 'The only match' and 'Pattern not found' messages
+set shortmess+=c
+
+" CTRL-C doesn't trigger the InsertLeave autocmd . map to <ESC> instead.
+inoremap <c-c> <ESC>
