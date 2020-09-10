@@ -166,6 +166,7 @@ endif
 " 3. Plugins
 ""
 call plug#begin('~/.local/share/nvim/plugged')
+Plug 'roxma/vim-tmux-clipboard'           " Clipboard fix for tmux
 Plug 'mhartington/oceanic-next'           " Color scheme
 Plug 'ctrlpvim/ctrlp.vim'                 " Fuzzy finder
 Plug 'SirVer/ultisnips'                   " Fast snippet solution for Vim (requires Python)
@@ -187,6 +188,7 @@ Plug 'christoomey/vim-tmux-navigator'     " Allows to consistenly navigates betw
 Plug 'elixir-lang/vim-elixir'             " Syntax highlighting for Elixir
 Plug 'rhysd/vim-crystal'                  " Syntax highlighting for Crystal
 Plug 'jparise/vim-graphql'                " Syntax highlighting for GraphQL
+Plug 'leafgarland/typescript-vim'         " Syntax highlighting for TypeScript
 Plug 'tmux-plugins/vim-tmux-focus-events' " Used for automatically refreshing code in the editor
 Plug 'roxma/nvim-yarp'                    " Python framework ease writing Vim plugins
 Plug 'ncm2/ncm2'                          " Async completion framework for Neovim
@@ -194,27 +196,30 @@ Plug 'ncm2/ncm2-bufword'                  " Completion – Words from current bu
 Plug 'ncm2/ncm2-path'                     " Completion – Path
 Plug 'pbogut/ncm2-alchemist'              " Completion – Elixir
 Plug 'ncm2/ncm2-jedi'                     " Completion – Python
+Plug 'majutsushi/tagbar'                  " Overview of code structure for files
+Plug 'psf/black'                          " Code formatter for Python
+Plug 'nvie/vim-flake8'                    " Python linter
 call plug#end()
 
-" File tree (nerdtree)
+" 3.1. File tree (nerdtree)
 let g:nerdtree_tabs_open_on_console_startup=1
 let g:nerdtree_tabs_smart_startup_focus=1
+let NERDTreeIgnore = ['\.pyc$']
 map <C-n> :NERDTreeToggle<CR>
 
 " vim-airline
 let g:airline#extensions#tabline#enabled=1
 
-" Changes control (gundo.vim)
+" 3.2. Control of changes on files (gundo.vim)
 nnoremap <F5> :GundoToggle<CR>
 
-
-" Comments (tcomment_vim)
+" 3.3. Comments (tcomment_vim)
 map <C-c> :TComment<CR>
 
-" Search (ag.vim)
+" 3.4. Search (ag.vim)
 nnoremap <leader>a :Ag 
 
-" Completion (NCM2)
+" 3.5. Completion (NCM2)
 
 " Enable ncm2 for all buffers
 autocmd BufEnter * call ncm2#enable_for_buffer()
@@ -225,3 +230,20 @@ set shortmess+=c
 
 " CTRL-C doesn't trigger the InsertLeave autocmd . map to <ESC> instead.
 inoremap <c-c> <ESC>
+
+" 3.6. CTags
+nnoremap <silent> <Leader>b :TagbarToggle<CR>
+
+" 3.7. Linters
+
+" Python files (flake8):
+let g:syntastic_python_checkers=['flake8']
+autocmd FileType python map <Leader>l :call flake8#Flake8()<CR>
+
+" If you want to run the linter every time you save a Python file:
+" autocmd BufWritePost *.py call flake8#Flake8()
+
+" 3.8. Formatters
+
+" Python files (black):
+autocmd FileType python map <Leader>f :Black<CR>
